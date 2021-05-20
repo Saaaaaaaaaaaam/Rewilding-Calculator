@@ -12,19 +12,20 @@ public class Calculation {
 
     private double cost=0;
 
-    public double Calculate(int stage, double input){
-        if(stage==0){
-        return AirMiles(input);
-        }else if(stage==1){
-
-        }
-
-
-
-        return -1;
+    public double getAirmiles() {
+        return airmiles;
     }
 
-    private double AirMiles(double miles){
-        return miles*airCarbon;
+    public void setAirmiles(double airmiles) {
+        this.airmiles = airmiles;
+    }
+
+    private double airmiles;
+
+
+
+    public double getAirMiles(double miles){
+        airmiles=miles*airCarbon;
+        return airmiles;
     }
 }
