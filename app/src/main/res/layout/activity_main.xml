@@ -14,13 +14,13 @@
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="256dp"
         android:ems="10"
-        android:hint="Type Here"
+        android:hint="@string/hint"
+        android:imeOptions="actionGo"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:imeOptions="actionGo"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -30,7 +30,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="100dp"
-        android:text="How Many Flights have you made to chile?"
+        android:text="@string/Question1"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

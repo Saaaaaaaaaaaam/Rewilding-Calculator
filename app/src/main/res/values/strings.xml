@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Rewilding-Calculator</string>
+    <string name="hint">Type Here</string>
+    <string name="Question1">How many flights have you made to chile</string>
+    <string name="Question2">Placeholder2</string>
+    <string name="Question3">Placeholder3</string>
+    <string name="Question4">Placeholder4</string>
+    <string name="Question5">Placeholder5</string>
 </resources>

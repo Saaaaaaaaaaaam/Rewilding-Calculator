@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String Tag = "MainActivity";//Only needed for debugging
     public Calculation calc = new Calculation(); //Object declared globally
     public int stage = 0;
-    TextView display = findViewById(R.id.textView2); //Define the output box
+
 
     //    ListView output = findViewById(R.id.listview);
     @Override
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         EditText input = findViewById(R.id.editTextNumber);//Define input box
 //        Button b1 = findViewById(R.id.button);//
         TextView working = findViewById(R.id.textView);
-
+        TextView display = findViewById(R.id.textView2); //Define the output box
 
         input.setOnEditorActionListener(editorActionListener); //listener for when enter is pressed
 
@@ -65,7 +65,13 @@ public class MainActivity extends AppCompatActivity {
             return calc.getAirMiles(input);
         } else if (stage == 1) {
 //            stage++;
-
+            NextStep();
+        }else if (stage == 2) {
+//            stage++;
+            NextStep();
+        }else if (stage == 3) {
+//            stage++;
+            NextStep();
         }
 
 
@@ -74,8 +80,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void NextStep(){
+        TextView display = findViewById(R.id.textView2); //Define the output box
+        EditText input = findViewById(R.id.editTextNumber);//Define input box
         if(stage==0){
-            display.setText("PLACEHOLDER");
+//            input.setVisibility(View.INVISIBLE);
+            display.setText(getString(R.string.Question2));
+//            input.setVisibility(View.VISIBLE);
+        }else if(stage==1){
+            display.setText(getString(R.string.Question3));
+        }else if(stage==2){
+            display.setText(getString(R.string.Question4));
+        }else if(stage==3){
+            display.setText(getString(R.string.Question5));
         }
         stage++;
 
