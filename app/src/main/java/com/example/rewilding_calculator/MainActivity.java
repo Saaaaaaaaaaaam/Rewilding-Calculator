@@ -1,26 +1,17 @@
 package com.example.rewilding_calculator;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.method.KeyListener;
-import android.text.method.NumberKeyListener;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String Tag = "MainActivity";//Only needed for debugging
     public Calculation calc = new Calculation(); //Object declared globally
-    public int stage = 0;
+    public int stage = 0; //Will move to calculation class at some point
 
 
     //    ListView output = findViewById(R.id.listview);
@@ -48,28 +39,34 @@ public class MainActivity extends AppCompatActivity {
             Log.d(Tag, "Enter Pressed");//debug log
 
 
-
 //            calc.setCost(calc.getCost() + Double.parseDouble(String.valueOf(v.getText())));//increase cost in calculation by the value entered by the user
 //            calc.setCost(calc.getCost() + 2);
             Log.d(Tag, "Count" + String.valueOf(calc.getCost()));//debug log
-            working.setText( String.valueOf(Calculate(Double.parseDouble(String.valueOf(v.getText())))));
+            working.setText(working.getText()+"\n"+String.valueOf(Calculate(Double.parseDouble(String.valueOf(v.getText())))));
             return false;
         }
     };
 
+    /**
+     * Calls the relevant calculation according to the step
+     * @param input
+     * @return output from Calculation class
+     */
     public double Calculate(double input) {
 
         if (stage == 0) {
 //            stage++;
+
             NextStep();
             return calc.getAirMiles(input);
         } else if (stage == 1) {
 //            stage++;
             NextStep();
-        }else if (stage == 2) {
+            return calc.getCarMiles(input);
+        } else if (stage == 2) {
 //            stage++;
             NextStep();
-        }else if (stage == 3) {
+        } else if (stage == 3) {
 //            stage++;
             NextStep();
         }
@@ -79,18 +76,20 @@ public class MainActivity extends AppCompatActivity {
         return -1;
     }
 
-    public void NextStep(){
-        TextView display = findViewById(R.id.textView2); //Define the output box
-        EditText input = findViewById(R.id.editTextNumber);//Define input box
-        if(stage==0){
-//            input.setVisibility(View.INVISIBLE);
+    /**
+     * Changes the user prompt
+     * Increments the step counter
+     */
+    public void NextStep() {
+        TextView display = findViewById(R.id.textView2); //Define the output box in this scope
+        EditText input = findViewById(R.id.editTextNumber);//Define input box in this scope
+        if (stage == 0) {
             display.setText(getString(R.string.Question2));
-//            input.setVisibility(View.VISIBLE);
-        }else if(stage==1){
+        } else if (stage == 1) {
             display.setText(getString(R.string.Question3));
-        }else if(stage==2){
+        } else if (stage == 2) {
             display.setText(getString(R.string.Question4));
-        }else if(stage==3){
+        } else if (stage == 3) {
             display.setText(getString(R.string.Question5));
         }
         stage++;
