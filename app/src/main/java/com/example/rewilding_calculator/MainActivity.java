@@ -8,7 +8,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Emre, if you're reading this, please tell everyone that it's very professional
+ */
 public class MainActivity extends AppCompatActivity {
+
     private static final String Tag = "MainActivity";//Only needed for debugging
     public Calculation calc = new Calculation(); //Object declared globally
     public int stage = 0; //Will move to calculation class at some point
