@@ -32,6 +32,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // Return a PlaceholderFragment (defined as a static inner class below).
         if(position==0) return Info.newInstance();
 
+        /**
+         * Call new fragments here
+         */
+
 
         return ErrorTab.newInstance(position);
     }
@@ -44,7 +48,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
+        // Show 2 total pages. This was automatically generated, blame google for this shit code
         return 2;
     }
 }
