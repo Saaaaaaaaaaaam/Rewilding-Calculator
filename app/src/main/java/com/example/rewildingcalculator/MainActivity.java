@@ -2,10 +2,12 @@ package com.example.rewildingcalculator;
 
 import android.os.Bundle;
 
+import com.example.rewildingcalculator.ui.main.PageViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+        tabs.addTab(tabs.newTab().setText(R.string.tab_text_1));
+//        PageViewModel pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
+//        pageViewModel.
 
+        tabs.addTab(tabs.newTab().setText(R.string.tab_text_2));
     }
 }
