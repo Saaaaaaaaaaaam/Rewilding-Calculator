@@ -16,6 +16,8 @@ import com.example.rewildingcalculator.R;
 
 /**
  * A placeholder fragment containing a simple view.
+ *
+ * I'm keeping it here because its useful for learning how fragments work but it should not be accessible by the user
  */
 public class PlaceholderFragment extends Fragment {
 
