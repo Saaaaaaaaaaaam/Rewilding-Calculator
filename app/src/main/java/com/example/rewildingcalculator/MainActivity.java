@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
-        tabs.addTab(tabs.newTab().setText(R.string.tab_text_1));
-//        PageViewModel pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
+//        tabs.addTab(tabs.newTab().setText(R.string.tab_text_1));
+        PageViewModel pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
 //        pageViewModel.
 
-        tabs.addTab(tabs.newTab().setText(R.string.tab_text_2));
+//        tabs.addTab(tabs.newTab().setText(R.string.tab_text_2));
     }
 }

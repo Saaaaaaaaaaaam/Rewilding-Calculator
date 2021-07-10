@@ -2,6 +2,10 @@
     <string name="app_name">Rewilding Calculator</string>
     <string name="tab_text_1">Who we are</string>
     <string name="tab_text_2">Page 1</string>
+    <string name="Who_we_are">"Sandwich and flask Sunday lunches, hiking no matter the weather, and dips in freezing water are part of our family's way of life. The Dewar family reunions have always been adventurous trips into nature, building dams in forests, playing improvised rounders at the beach, or constructing impressive campfires.
+From the North East of England, the Dewar's have now emigrated to several different countries, making family reunions ever so special.
+As a young professional Steve, the founder of Dewar Rewilding Ltd. worked to implement renewable energy and has recently expanded his passion for sustainability to create a carbon-neutral life.
+Steve's idea sparked the family's and partner's enthusiasm to come together to fulfill a passion project and build a sustainable forest."</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
