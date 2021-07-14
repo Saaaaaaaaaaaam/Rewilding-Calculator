@@ -3,17 +3,13 @@ package com.example.rewildingcalculator;
 import android.os.Bundle;
 
 import com.example.rewildingcalculator.ui.main.PageViewModel;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.widget.TextView;
 
 import com.example.rewildingcalculator.ui.main.SectionsPagerAdapter;
 
@@ -32,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         PageViewModel pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
 //        pageViewModel.
 
+//        textView.setTextAppearance();
+
 //        tabs.addTab(tabs.newTab().setText(R.string.tab_text_2));
     }
+
+
 }

@@ -37,6 +37,11 @@ public class DummyContent {
         ITEM_MAP.put(item.id, item);
     }
 
+    /**
+     * gonna use this for defining ye olde templates
+     * @param position
+     * @return template for items in the list
+     */
     private static DummyItem createDummyItem(int position) {
         return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
     }
